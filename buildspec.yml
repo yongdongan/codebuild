@@ -25,13 +25,11 @@ phases:
       - WAR_FILE=$(ls target/*.war | head -n1)
       - cp "$WAR_FILE" output/ROOT.war
       - echo "Done: $(ls -al output)"
-
 artifacts:
   files:
     - output/ROOT.war
   name: myapp-war-$(date +%Y%m%d%H%M%S)
   discard-paths: yes
-
 cache:
   paths:
     - "/root/.m2/**/*"
