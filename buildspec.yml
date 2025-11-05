@@ -22,9 +22,8 @@ phases:
       # 프로젝트 패키징이 war 인 경우 target/*.war 존재
       - ls -al target || true
       # 루트 경로 배포를 염두에 두고 ROOT.war로 이름 고정 (원하면 myapp.war 유지)
-      - |
-        WAR_FILE=$(ls target/*.war | head -n1)
-        cp "$WAR_FILE" output/ROOT.war
+      - WAR_FILE=$(ls target/*.war | head -n1)
+      - cp "$WAR_FILE" output/ROOT.war
       - echo "Done: $(ls -al output)"
 
 artifacts:
