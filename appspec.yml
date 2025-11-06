@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: myapp.war
+  - source: ROOT.war
     destination: /opt/tomcat/webapps/ROOT.war   # 루트(/)로 서비스
     owner: tomcat
     group: tomcat
