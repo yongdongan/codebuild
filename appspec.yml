@@ -1,12 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: ROOT.war
-    destination: /opt/tomcat/webapps/ROOT.war   # 루트(/)로 서비스
+  - source: /target/myapp.war
+    destination: /opt/tomcat/webapps/myapp.war   # 루트(/)로 서비스
     owner: tomcat
     group: tomcat
 permissions:
-  - object: /opt/tomcat/webapps/ROOT.war
+  - object: /opt/tomcat/webapps/myapp.war
     owner: tomcat
     group: tomcat
     mode: 644

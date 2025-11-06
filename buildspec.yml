@@ -18,25 +18,12 @@ phases:
   post_build:
     commands:
       - echo "Prepare artifacts"
-      - mkdir -p output
       # 프로젝트 패키징이 war 인 경우 target/*.war 존재
-      - ls -al target || true
-      - |
-          set -euo pipefail
-          # WAR 탐색
-          WAR_FILE=$(ls -1 target/*.war 2>/dev/null | head -n1 || true)
-          if [ -z "${WAR_FILE:-}" ]; then
-            echo "No WAR found in target/"; exit 1
-          fi
-          # ROOT.war로 복사
-          cp "$WAR_FILE" output/ROOT.war
-          echo "Done:"
-          ls -al output
-      - zip -r myapp.zip appspec.yml output/ROOT.war scripts/
+      - zip -r myapp.zip appspec.yml target/myapp.war scripts/
       - aws s3 cp myapp.zip s3://yongdong-s3-2/codebuild/myapp.zip
 artifacts:
   files:
-    - output/ROOT.war
+    - target/myapp.war
   discard-paths: yes
 cache:
   paths:
