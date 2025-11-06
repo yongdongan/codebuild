@@ -33,7 +33,7 @@ phases:
           echo "Done:"
           ls -al output
       - zip -r myapp.zip appspec.yml output/ROOT.war scripts/
-      - aws s3 cp myapp-codedeploy.zip s3://yongdong-s3-2/codedeploy/myapp-codedeploy.zip
+      - aws s3 cp myapp.zip s3://yongdong-s3-2/codebuild/myapp.zip
 artifacts:
   files:
     - output/ROOT.war
