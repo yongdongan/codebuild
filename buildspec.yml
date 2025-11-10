@@ -18,9 +18,12 @@ phases:
   post_build:
     commands:
       - echo "Prepare artifacts"
-      # 프로젝트 패키징이 war 인 경우 target/*.war 존재
+
+      # CodeDeploy를 위한 artifacts파일 appspec.yml 파일 s3로 업로드 
+      # S3명 xx
       - zip -r RooT.zip appspec.yml target/RooT.war scripts/
       - aws s3 cp RooT.zip s3://yongdong-s3-2/codebuild/RooT.zip
+
 artifacts:
   files:
     - target/RooT.war
