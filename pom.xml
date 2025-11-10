@@ -15,7 +15,7 @@
   <!-- 빌드 설정 -->
   <build>
     <!-- WAR 파일명: target/myapp.war 로 생성됨 -->
-    <finalName>Root</finalName>
+    <finalName>RooT</finalName>
 
     <plugins>
       <!-- WAR 패키징 플러그인 -->
