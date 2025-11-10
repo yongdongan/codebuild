@@ -19,11 +19,11 @@ phases:
     commands:
       - echo "Prepare artifacts"
       # 프로젝트 패키징이 war 인 경우 target/*.war 존재
-      - zip -r myapp.zip appspec.yml target/myapp.war scripts/
-      - aws s3 cp myapp.zip s3://yongdong-s3-2/codebuild/myapp.zip
+      - zip -r RooT.zip appspec.yml target/RooT.war scripts/
+      - aws s3 cp RooT.zip s3://yongdong-s3-2/codebuild/RooT.zip
 artifacts:
   files:
-    - target/myapp.war
+    - target/RooT.war
   discard-paths: yes
 cache:
   paths:
