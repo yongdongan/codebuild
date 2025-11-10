@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /target/RooT.war
-    destination: /opt/tomcat/webapps/RooT.war   # 루트(/)로 서비스
+    destination: /opt/tomcat/webapps/
     owner: tomcat
     group: tomcat
 permissions:
