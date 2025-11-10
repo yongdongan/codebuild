@@ -1,12 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/RooT.war
+  - source: /target/ROOT.war
     destination: /opt/tomcat/webapps/
     owner: tomcat
     group: tomcat
 permissions:
-  - object: /opt/tomcat/webapps/RooT.war
+  - object: /opt/tomcat/webapps/ROOT.war
     owner: tomcat
     group: tomcat
     mode: 644

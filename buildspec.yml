@@ -23,7 +23,7 @@ artifacts:
   files:
     - appspec.yml
     - scripts/**/*
-    - target/RooT.war
+    - target/ROOT.war
   discard-paths: no
 
 cache:

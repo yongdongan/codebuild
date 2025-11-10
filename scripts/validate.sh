@@ -4,7 +4,7 @@ set -e
 # 로컬 헬스체크 (8080)
 
 for i in $(seq 1 "24"); do
-  if curl -fsS --connect-timeout "2" --max-time "5" "http://127.0.0.1:8080/RooT/hello" -o /dev/null; then
+  if curl -fsS --connect-timeout "2" --max-time "5" "http://127.0.0.1:8080/hello" -o /dev/null; then
     echo "[Validate] OK at attempt ${i}"
     exit 0
   fi
