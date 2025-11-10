@@ -29,7 +29,7 @@ artifacts:
     - appspec.yml
     - scripts/**/*
     - target/RooT.war
-  discard-paths: yes
+  discard-paths: no
 cache:
   paths:
     - "/root/.m2/**/*"
