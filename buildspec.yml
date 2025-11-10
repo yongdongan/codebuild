@@ -19,17 +19,13 @@ phases:
     commands:
       - echo "Prepare artifacts"
 
-      # CodeDeploy를 위한 artifacts파일 appspec.yml 파일 s3로 업로드 
-      # S3명 xx
-      - zip -r RooT.zip appspec.yml target/RooT.war scripts/
-      - aws s3 cp RooT.zip s3://yongdong-s3-2/codebuild/RooT.zip
-
 artifacts:
   files:
     - appspec.yml
     - scripts/**/*
     - target/RooT.war
   discard-paths: no
+
 cache:
   paths:
     - "/root/.m2/**/*"
