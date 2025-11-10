@@ -26,6 +26,8 @@ phases:
 
 artifacts:
   files:
+    - appspec.yml
+    - scripts/**/*
     - target/RooT.war
   discard-paths: yes
 cache:
