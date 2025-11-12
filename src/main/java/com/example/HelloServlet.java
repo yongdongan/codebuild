@@ -9,6 +9,6 @@ public class HelloServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
         resp.setContentType("text/html;charset=UTF-8");
-        resp.getWriter().println("<h1>Hello Today is 2025-11-12 phase3 !! </h1>");
+        resp.getWriter().println("<h1>Hello Today is 2025-11-12 phase4 Blue/Green !! </h1>");
     }
 }
